@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumo de API</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="icon" type="image/x" href="assets/image/navegador.png">
 </head>
-<body>
-    <script src="main.js"></script>
+<body class="bg-gray-200 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-6 text-gray-700">Pokemon API</h1>
+        <div id="status-api" class="text-center p-4 mb-4 text-lg"></div>
+        <div id="container-pokemon" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div class="flex justify-between mt-8">
+            <button id="btn-anterior"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Atras</button>
+            <button id="btn-siguiente" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Siguiente</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
