@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE_URL = "https://pokeapi.co/api/v2/pokemon";
+  const API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
 
   const container = document.getElementById("container-pokemon");
   const estado = document.getElementById("status-api");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setCargando() {
     container.innerHTML = "";
-    mostrandoEstado("Se esta cargando el pokemon...");
+    mostrandoEstado("Se esta cargando los pokemons...");
     btnAnterior.disabled = true;
     btnSiguiente.disabled = true;
   }
