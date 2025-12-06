@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consumo de API</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="icon" type="image/x" href="assets/image/navegador.png">
-</head>
-<body class="bg-gray-200 p-8">
+    <link rel="icon" type="image/x" href="assets/image/navegador.png" />
+  </head>
+  <body class="bg-gray-200 p-8">
     <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold text-center mb-6 text-gray-700">Pokemon API</h1>
-        <div id="status-api" class="text-center p-4 mb-4 text-lg"></div>
-        <div id="container-pokemon" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        <div class="flex justify-between mt-8">
-            <button id="btn-anterior"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Atras</button>
-            <button id="btn-siguiente" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Siguiente</button>
-        </div>
+      <h1 class="text-4xl font-bold text-center mb-6 text-gray-700">
+        Pokemon API
+      </h1>
+      <div class="flex items-center gap-4 mb-6 bg-white rounded-lg shadow-lg p-4">
+        <input
+          type="text"
+          id="pokemon-id"
+          placeholder="Buscar por nombre o ID (ej: pikachu o 37)"
+          class="grow px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+          id="search-btn"
+          class="bg-green-600 hover:bg-green-700 text-white font-bold px-4 py-2 rounded"
+        >
+          Buscar
+        </button>
+      </div>
+      <div id="search-result-container" class="mb-6"></div>
+      <div id="status-api" class="text-center p-4 mb-4 text-lg"></div>
+      <div
+        id="container-pokemon"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+      <div class="flex justify-between mt-8">
+        <button
+          id="btn-anterior"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+        >
+          Atras
+        </button>
+        <button
+          id="btn-siguiente"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+        >
+          Siguiente
+        </button>
+      </div>
     </div>
     <script src="/Ing-consumirApi/js/app.js"></script>
-</body>
+  </body>
 </html>
