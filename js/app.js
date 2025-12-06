@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let imageHtml;
 
-    if(imageUrl.includes("placeholder.com")) {
+    if (imageUrl.includes("placeholder.com")) {
       imageHtml = `<div class="mx-auto h-32 w-32 mb-4 flex items-center justify-center text-center text-gray-600 border rounded-lg">Sin imagen oficial para mostrar.</div>`;
     } else {
       imageHtml = `<img src="${imageUrl}" alt="${name}" class="mx-auto h-32 w-32 mb-4">`;
@@ -122,16 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(`${API_BASE_URL}${entrada}`);
 
       if (!response.ok) {
-        throw new Error(
-          "Pokemon no encontrado. Intenta con otro nombre o ID."
-        );
+        throw new Error("Pokemon no encontrado. Intenta con otro nombre o ID.");
       }
 
       const data = await response.json();
 
       searchResultContainer.innerHTML = "";
       renderPokemon(data, searchResultContainer);
-
     } catch (error) {
       searchResultContainer.innerHTML = `<p class="text-red-500 p-4 bg-white rounded-lg">${error.message}</p>`;
     }
