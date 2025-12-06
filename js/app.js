@@ -132,11 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
       searchResultContainer.innerHTML = "";
       renderPokemon(data, searchResultContainer);
 
-      searchInput.value = "";
-
     } catch (error) {
       searchResultContainer.innerHTML = `<p class="text-red-500 p-4 bg-white rounded-lg">${error.message}</p>`;
     }
+
+    searchInput.value = "";
   }
 
   btnSiguiente.addEventListener("click", () => {
